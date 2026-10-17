@@ -1,0 +1,49 @@
+{
+  "data_kind": "M5 PUBLIC HISTORICAL SALES",
+  "sku_count": 30,
+  "history_days": 1941,
+  "selected_forecast_method": "ridge",
+  "validation_wape": {
+    "ridge": 0.40416764863763577,
+    "moving_mean_28": 0.4051178928193762,
+    "seasonal_naive_7": 0.4551386623164764
+  },
+  "test_wape": {
+    "ridge": 0.3090353418255203,
+    "moving_mean_28": 0.3601169632932778,
+    "seasonal_naive_7": 0.36277346915152214
+  },
+  "inventory_results": [
+    {
+      "policy": "abc_xyz",
+      "simulation_fill_rate": 0.9733186711424934,
+      "demand_units": 17278,
+      "fulfilled_units": 16817,
+      "lost_units": 461,
+      "avg_ending_on_hand": 3803.8928571428573,
+      "total_ordered_units": 10665,
+      "po_events": 112
+    },
+    {
+      "policy": "rop",
+      "simulation_fill_rate": 0.9765019099432805,
+      "demand_units": 17278,
+      "fulfilled_units": 16872,
+      "lost_units": 406,
+      "avg_ending_on_hand": 3821.6785714285716,
+      "total_ordered_units": 10628,
+      "po_events": 111
+    },
+    {
+      "policy": "weekly_cover",
+      "simulation_fill_rate": 0.9257437203380021,
+      "demand_units": 17278,
+      "fulfilled_units": 15995,
+      "lost_units": 1283,
+      "avg_ending_on_hand": 3532.1428571428573,
+      "total_ordered_units": 8983,
+      "po_events": 81
+    }
+  ]
+}
+Saved results in: outputs/m5
