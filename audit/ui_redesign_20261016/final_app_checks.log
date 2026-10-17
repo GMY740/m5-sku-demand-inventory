@@ -1,0 +1,9 @@
+2026-10-16 21:12:40.034 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+PASS 经营总览
+PASS 商品分层
+PASS 预测分析
+PASS 库存策略
+PASS 每日台账
+PASS 数据说明
+PASS demo provenance
+PASS real output hashes unchanged
