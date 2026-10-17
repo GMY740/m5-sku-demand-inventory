@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+data/raw/*
+!data/raw/README.md
+data/demo/
+outputs/demo/
+*.log
+!audit/real_m5/logs/01_run.log
+!audit/real_m5/logs/05_pytest.log
+!audit/ui_redesign_20261016/final_app_checks.log
