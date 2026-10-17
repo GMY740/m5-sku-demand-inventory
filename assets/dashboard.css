@@ -1,0 +1,46 @@
+:root { --bg:#0a1020; --panel:#111c30; --edge:#23314a; --text:#e9f0fb; --muted:#8d9fb9; --mint:#38d6b0; }
+.stApp { background:var(--bg); }
+header[data-testid="stHeader"] { background:transparent; height:0; }
+#MainMenu, footer, [data-testid="stToolbar"], [data-testid="stDecoration"] { display:none; }
+[data-testid="stMainBlockContainer"] { padding:1.25rem 2rem 1.5rem; max-width:1800px; }
+[data-testid="stVerticalBlock"] { gap:.7rem; }
+[data-testid="stMarkdownContainer"] p { margin-bottom:0; }
+.brand { display:flex; align-items:center; gap:14px; min-height:66px; }
+.brand-mark { width:42px; height:42px; display:grid; place-items:center; border:1px solid #38d6b055; border-radius:12px; background:#38d6b012; color:var(--mint); font-size:25px; font-weight:800; }
+.brand h1 { color:var(--text); font-size:25px; font-weight:650; letter-spacing:1px; margin:0; padding:0; line-height:1.4; }
+.brand p { color:var(--muted); font-size:12px; margin-top:5px; letter-spacing:.7px; }
+.source-row { display:flex; flex-wrap:wrap; align-items:center; gap:9px; padding:4px 0 8px; color:var(--muted); font-size:12px; }
+.pill { border:1px solid #38d6b033; color:#68e7c8; background:#38d6b00b; padding:4px 9px; border-radius:5px; font-size:11px; }
+.pill.gold { color:#efc36c; border-color:#efc36c33; background:#efc36c0b; }
+.source-row .range { margin-left:auto; }
+[data-testid="stRadio"] > div[role="radiogroup"] { gap:5px; border-bottom:1px solid var(--edge); padding:0 0 9px; flex-wrap:wrap; }
+[data-testid="stRadio"] label { background:transparent; padding:8px 20px !important; border-radius:6px; margin:0 !important; color:var(--muted); }
+[data-testid="stRadio"] label:has(input:checked) { background:#1c393e; color:#71e8cd; }
+[data-testid="stRadio"] label > div:first-child { display:none; }
+[data-testid="stRadio"] label p { font-size:14px; font-weight:550; }
+[data-testid="stWidgetLabel"] p { font-size:12px; color:var(--muted); }
+[data-baseweb="select"] > div { border:1px solid var(--edge) !important; background:#101b2e !important; border-radius:6px; min-height:36px; font-size:13px; }
+.kpis { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:13px; margin:5px 0 8px; }
+.kpi { background:var(--panel); border:1px solid var(--edge); border-radius:9px; padding:16px 19px 14px; position:relative; overflow:hidden; }
+.kpi:before { content:''; position:absolute; left:0; top:18px; width:3px; height:32px; background:var(--accent,#38d6b0); }
+.kpi-label { font-size:12px; color:#a6b6cd; letter-spacing:.3px; }
+.kpi-value { margin:8px 0 6px; font-size:30px; line-height:1.1; font-weight:650; font-variant-numeric:tabular-nums; color:#f2f6fc; letter-spacing:.3px; }
+.kpi-note { font-size:11px; color:var(--muted); }
+[data-testid="stVerticalBlockBorderWrapper"] { border-color:var(--edge) !important; background:var(--panel); border-radius:9px !important; }
+[data-testid="stVerticalBlockBorderWrapper"] > div { padding:14px 17px 8px !important; }
+.panel-head { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:2px; }
+.panel-title { font-size:14px; font-weight:600; letter-spacing:.4px; color:#dde8f8; }
+.panel-note { font-size:11px; color:var(--muted); }
+.section-label { color:#aebed2; font-size:12px; margin:2px 0; }
+.footnote { color:#7589a6; font-size:11px; border-top:1px solid var(--edge); margin-top:10px; padding-top:12px; line-height:1.7; }
+.insight { color:#b7c7da; font-size:12px; padding:11px 15px; border:1px solid #284143; border-left:3px solid var(--mint); border-radius:5px; background:#10252a; line-height:1.7; }
+.stDownloadButton button { background:#193238; color:#79e5cb; border:1px solid #2c5758; font-size:12px; }
+[data-testid="stExpander"] { border-color:var(--edge); }
+[data-testid="stDataFrame"] { border-radius:6px; }
+[data-testid="stCaptionContainer"] { color:var(--muted); font-size:12px; }
+@media(max-width:850px) { [data-testid="stMainBlockContainer"]{padding:1rem;} .brand h1{font-size:20px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi-value{font-size:25px}.source-row .range{margin-left:0}[data-testid="stRadio"] label{padding:8px 12px !important;} }
+
+/* Stable selectors for the installed Streamlit control structure. */
+[data-testid="stRadioOption"] > div > div:first-child { display:none; }
+[data-testid="stRadio"] > div[role="radiogroup"] { width:100%; }
+[data-testid="stLayoutWrapper"]:has(> [data-testid="stVerticalBlock"] > [data-testid="stElementContainer"] .panel-head) { background:#111c30; border-color:#23314a !important; border-radius:9px; }
