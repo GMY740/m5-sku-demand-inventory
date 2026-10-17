@@ -1,0 +1,70 @@
+{
+  "data_kind": "M5 PUBLIC HISTORICAL SALES",
+  "source_name": "m5",
+  "store": "CA_1",
+  "sku_count": 30,
+  "history_days": 1941,
+  "data_start": "2011-01-29",
+  "data_end": "2016-05-22",
+  "validation_start": "2016-02-29",
+  "test_start": "2016-04-25",
+  "test_end": "2016-05-22",
+  "selected_forecast_method": "ridge",
+  "validation_wape": {
+    "ridge": 0.40416764863763577,
+    "moving_mean_28": 0.4051178928193762,
+    "seasonal_naive_7": 0.4551386623164764
+  },
+  "test_wape": {
+    "ridge": 0.3090353418255203,
+    "moving_mean_28": 0.3601169632932778,
+    "seasonal_naive_7": 0.36277346915152214
+  },
+  "inventory_assumptions": {
+    "initial_stock": "mean actual daily demand from last 84 observed days *14; simulated",
+    "lead_days": 7,
+    "review_days": 7,
+    "lost_sales": true,
+    "starting_pipeline": "empty",
+    "cost_model": "no actual cost data; no savings claims"
+  },
+  "inventory_results": [
+    {
+      "policy": "abc_xyz",
+      "simulation_fill_rate": 0.9733186711424934,
+      "demand_units": 17278,
+      "fulfilled_units": 16817,
+      "lost_units": 461,
+      "avg_ending_on_hand": 3803.8928571428573,
+      "total_ordered_units": 10665,
+      "po_events": 112
+    },
+    {
+      "policy": "rop",
+      "simulation_fill_rate": 0.9765019099432805,
+      "demand_units": 17278,
+      "fulfilled_units": 16872,
+      "lost_units": 406,
+      "avg_ending_on_hand": 3821.6785714285716,
+      "total_ordered_units": 10628,
+      "po_events": 111
+    },
+    {
+      "policy": "weekly_cover",
+      "simulation_fill_rate": 0.9257437203380021,
+      "demand_units": 17278,
+      "fulfilled_units": 15995,
+      "lost_units": 1283,
+      "avg_ending_on_hand": 3532.1428571428573,
+      "total_ordered_units": 8983,
+      "po_events": 81
+    }
+  ],
+  "limitations": [
+    "M5 lacks actual on-hand stock and procurement orders",
+    "Simulation is not a real replenishment outcome",
+    "Price is used for classification, not as forecast regressor",
+    "A selected subset of active SKUs from one store is evaluated",
+    "Past sales can be censored by stockouts; missing stockout labels"
+  ]
+}
