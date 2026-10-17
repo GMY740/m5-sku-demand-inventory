@@ -1,0 +1,42 @@
+{
+  "checks": "PASS",
+  "data_kind": "M5 PUBLIC HISTORICAL SALES",
+  "sales_file": "sales_train_evaluation.csv",
+  "raw_rows": {
+    "calendar": 1969,
+    "sales": 30490,
+    "CA_1": 3049,
+    "sell_prices": 6841121
+  },
+  "row_counts": {
+    "classification": 30,
+    "forecast_predictions": 7560,
+    "forecast_metrics": 6,
+    "forecast_sku_metrics": 180,
+    "inventory_ledger": 2520,
+    "inventory_scores": 3,
+    "leadtime_sensitivity": 9
+  },
+  "classification_window": [
+    "2015-03-02",
+    "2016-02-28"
+  ],
+  "classification_days": 364,
+  "validation_dates": [
+    "2016-02-29",
+    "2016-04-24"
+  ],
+  "test_dates": [
+    "2016-04-25",
+    "2016-05-22"
+  ],
+  "prevalidation_volume_share_of_CA_1": 0.14012400409406392,
+  "selected_value_total": 471623.77,
+  "min_priced_unit_coverage": 1.0,
+  "raw_sha256": {
+    "calendar.csv": "d12b5914ef03e66649adf5dd9e996e6602251c22b7a6af8f1f7e3aa12f8860f5",
+    "sales_train_evaluation.csv": "4b4a47c44c38380d2a9168216fea8c9ff2f31b1ddb772f8a0995952a038b8aa0",
+    "sales_train_validation.csv": "f368e66ed1dbecb48b2cc8fc589bf68b3deddbbb36bf5c88b4d6d0a09b9b6724",
+    "sell_prices.csv": "9da3ad1f8b8ccacdbdc70612191dd375ec24a4ac6625c24b75b3bc60b0bed2ef"
+  }
+}

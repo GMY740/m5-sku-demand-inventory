@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-16",
+  "timezone": "Asia/Shanghai",
+  "python": "Project virtual environment; absolute local path omitted",
+  "commands": [
+    {
+      "command": "python run.py --raw data/raw --store CA_1 --top-n 30 --lead-days 7",
+      "exit_code": 0,
+      "log": "logs/01_run.log"
+    },
+    {
+      "command": "python audit/real_m5/verify_real.py",
+      "exit_code": 0,
+      "log": "logs/08_final_verification.log"
+    },
+    {
+      "command": "python make_report.py --out outputs/m5",
+      "exit_code": 0,
+      "log": "logs/03_report.log"
+    },
+    {
+      "command": "python -m pytest -q",
+      "exit_code": 0,
+      "result": "9 passed",
+      "log": "logs/05_pytest.log"
+    },
+    {
+      "command": "python -m audit.real_m5.check_real_app",
+      "exit_code": 0,
+      "log": "logs/06_final_app_checks.log"
+    }
+  ],
+  "raw_data_repackaged": false,
+  "algorithm_changed": false,
+  "pdf_pages": 7,
+  "html_sections": 7,
+  "html_images_loaded": 4,
+  "publication_note": "Original run record. Full local audit scripts are retained locally; see validation.md for publication evidence."
+}
