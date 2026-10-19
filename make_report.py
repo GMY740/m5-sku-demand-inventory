@@ -20,6 +20,11 @@ METHODS=['seasonal_naive_7','moving_mean_28','ridge']
 
 def build(outdir:Path):
     outdir=Path(outdir)
+    if outdir.resolve()==(Path(__file__).resolve().parent/'outputs/m5').resolve():
+        raise ValueError('Published outputs/m5 reports are immutable; use outputs/m5_market')
+    if (outdir/'market_manifest.json').exists():
+        from src.market_report import build_market_report
+        return build_market_report(outdir,Path(__file__).resolve().parent)
     s=json.loads((outdir/'summary.json').read_text(encoding='utf-8'))
     required=['classification','forecast_metrics','forecast_sku_metrics','forecast_predictions','inventory_scores','inventory_ledger','leadtime_sensitivity']
     t={n:pd.read_csv(outdir/f'{n}.csv') for n in required}

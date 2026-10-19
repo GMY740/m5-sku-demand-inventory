@@ -1,0 +1,23 @@
+{
+  "version": "m5_market_v1",
+  "kind": "D ASSUMPTIONS AND SIMULATION",
+  "fixed_comparison_method": "ridge",
+  "candidate_method": "ridge_price_history",
+  "history_demand_start": "2016-04-25",
+  "history_demand_end": "2016-05-22",
+  "calendar_end": "2016-06-19",
+  "calendar_source": "Official calendar, includes known post-sales dates. No invented SNAP/event flags.",
+  "forecast_coverage": "At least28 days every decision; target lead+review fully covered, no truncation",
+  "initial_stock": "ceil(pre-test84day daily mean*14), same all policies and lead cases",
+  "starting_pipeline": 0,
+  "review_days": 7,
+  "lead_days": [
+    3,
+    7,
+    14
+  ],
+  "lost_sales": true,
+  "costs": "Not available; no cost savings or real inventory claim",
+  "terminal_effect": "Full forecast coverage fixed; finite28day evaluation and terminal outstanding POs remain. Terminal pipeline and onhand reported.",
+  "rolling_information": "Each decision uses actual sales and price history strictly before that decision; fixed test-origin fitted coefficients."
+}

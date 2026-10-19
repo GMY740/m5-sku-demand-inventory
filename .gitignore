@@ -15,3 +15,8 @@ outputs/demo/
 !audit/real_m5/logs/01_run.log
 !audit/real_m5/logs/05_pytest.log
 !audit/ui_redesign_20261016/final_app_checks.log
+
+# Market upgrade evidence and immutable original snapshots
+!audit/market_upgrade/*.log
+audit/market_upgrade/before/
+!audit/publish_20261018/pytest.log

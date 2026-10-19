@@ -1,0 +1,10 @@
+# 图表与数据来源对照
+
+| 图表 | 业务指标 | 计算范围与口径 | 来源结果文件 |
+| --- | --- | --- | --- |
+| 01 品类销售金额结构 | 按零售售价估算的销售金额（百万美元） | 10家样本门店，364天；数量×对应周零售价 | category_totals.csv |
+| 02 月度单店日均销量 | 销售数量（件/店·日） | 品类月销量÷有记录的门店日数；首末月不完整 | category_daily.csv；report_tables/monthly_store_day_rates.csv |
+| 03 地区品类比较 | 各州品类单店日均销量（件/店·日） | 同一364天；州内门店平均 | regional_category_comparison.csv |
+| 04 价格与销量案例 | 零售价格（美元/件）、日均销售数量（件/日） | CA_1 FOODS_3_681周售价及该周销售数量÷周天数 | focus_weekly_prices_sales.csv；price_change_events.csv |
+| 05 预测误差对比 | 验证和测试WAPE（%） | 同30 SKU、相同窗口；销量加权绝对误差率 | forecast_metrics.csv |
+| 06 补货模拟权衡 | 模拟需求满足率、平均期末库存 | CA_1 30 SKU，2016-04-25至05-22，7天假设提前期 | inventory_scores.csv |

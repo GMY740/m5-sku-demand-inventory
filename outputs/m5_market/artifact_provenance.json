@@ -1,0 +1,192 @@
+{
+  "category_annual.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "category_daily.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "category_monthly.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "category_quarterly.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "category_seasonal_profile.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "category_structure.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "category_totals.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "category_weekday_profile.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "classification.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B original pre-validation30SKU classification, not post-test market ABC"
+  },
+  "department_totals.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "focus_monthly_demand.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "focus_weekly_prices_sales.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "forecast_category_metrics.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B error evaluation based on A and C"
+  },
+  "forecast_metrics.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B error evaluation based on A and C"
+  },
+  "forecast_predictions.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "A actual historical units + C model prediction"
+  },
+  "forecast_price_deltas.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B error evaluation based on A and C"
+  },
+  "forecast_sku_metrics.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B error evaluation based on A and C"
+  },
+  "forecast_verification.json": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B error evaluation based on A and C"
+  },
+  "inventory_candidate_ledger.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "D SIMULATION; ledger demand column is A historical sales"
+  },
+  "inventory_candidate_scores.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "D SIMULATION; ledger demand column is A historical sales"
+  },
+  "inventory_fix_comparison.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "D SIMULATION; ledger demand column is A historical sales"
+  },
+  "inventory_ledger.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "D SIMULATION; ledger demand column is A historical sales"
+  },
+  "inventory_manifest.json": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "D SIMULATION; ledger demand column is A historical sales"
+  },
+  "inventory_scores.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "D SIMULATION; ledger demand column is A historical sales"
+  },
+  "item_demand_trends.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "items.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "market_business_report.html": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "market_business_report.md": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "market_manifest.json": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "Evidence, provenance and parameters"
+  },
+  "model_selection.json": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "Evidence, provenance and parameters"
+  },
+  "price_associations.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "price_change_events.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "priority_risk_items.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "regional_category_comparison.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "regional_item_comparison.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "store_comparison.csv": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "B HISTORICAL COMPUTATION"
+  },
+  "summary.json": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "Evidence, provenance and parameters"
+  },
+  "verification.json": {
+    "version": "m5_market_v1",
+    "data_source": "Official M5 evaluation, calendar, sell_prices",
+    "content_kind": "Evidence, provenance and parameters"
+  }
+}

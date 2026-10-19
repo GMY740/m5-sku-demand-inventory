@@ -34,6 +34,9 @@ def load_m5(raw:Path,store:str='CA_1',top_n:int=30,horizon:int=28):
     daycols.sort(key=lambda s:int(s[2:]))
     # Only use the common, contiguous days in sales and calendar.
     cal=calendar.set_index('d').loc[daycols].reset_index()
+    # Retain official known future calendar, not future observed sales or prices.
+    extra=calendar.loc[calendar['d'].map(lambda x:int(str(x)[2:])>len(daycols))].copy()
+    cal=pd.concat([cal,extra],ignore_index=True)
     cal['date']=pd.to_datetime(cal['date'])
     state=store.split('_')[0]; snap_name=f'snap_{state}'
     if snap_name not in cal:raise ValueError(f'Missing calendar {snap_name}')
@@ -101,6 +104,8 @@ def predict_next(history,day:int,method:str,cal:pd.DataFrame,reg=None):
 
 
 def forecast(series,cal,origin,horizon,method,reg=None):
+    if origin+horizon>len(cal):raise ValueError('Insufficient known future calendar for full forecast coverage')
+    if method=='ridge_price_history':return reg.forecast(series,cal,origin,horizon)
     hist=list(map(float,series[:origin]));pred=[]
     for d in range(origin,origin+horizon):
         val=predict_next(hist,d,method,cal,reg)
@@ -194,14 +199,16 @@ def simulate_one(series,cal,origin:int,horizon:int,method:str,policy:Policy,reg,
         day=origin+j
         arrivals=sum(q for when,q in pipeline if when==day)
         pipeline=[(when,q) for when,q in pipeline if when>day]
+        opening_on_hand=on_hand
         on_hand+=arrivals
         # Forecast from information known at start of current day; no knowledge of today's actual demand.
         lead=policy.lead_days
         future=max(lead+policy.review_days,28)
-        available=min(future,len(cal)-day)
-        outlook=forecast(series,cal,day,available,method,reg)
-        lead_demand=outlook[:min(lead,available)].sum()
-        target_demand=outlook[:min(lead+policy.review_days,available)].sum()
+        if day+future>len(cal):
+            raise ValueError('Insufficient known future calendar; refusing shortened replenishment horizon')
+        outlook=forecast(series,cal,day,future,method,reg)
+        lead_demand=outlook[:lead].sum()
+        target_demand=outlook[:lead+policy.review_days].sum()
         z=policy.service_z
         if policy.name=='abc_xyz':
             if abc_xyz.startswith('A') and abc_xyz.endswith('Z'):z=2.05
@@ -223,7 +230,10 @@ def simulate_one(series,cal,origin:int,horizon:int,method:str,policy:Policy,reg,
             arrivals=arrivals,demand=demand,fulfilled=fulfilled,lost=lost,
             ordered=int(order_qty),ending_on_hand=on_hand,
             in_transit=sum(q for _,q in pipeline),reorder_point=reorder_point,
-            safety_stock=ss))
+            safety_stock=ss,opening_on_hand=opening_on_hand,inventory_position=inventory_position,
+            target_stock=target,forecast_lead_units=float(lead_demand),forecast_target_units=float(target_demand),
+            forecast_days=future,target_coverage_days=lead+policy.review_days,
+            order_arrival_date=str(cal.iloc[day+lead]['date'].date()) if order_qty>0 else None))
     return pd.DataFrame(ledger)
 
 
@@ -252,7 +262,10 @@ def policy_backtest(items,values,cal,abc,origin,method,forecasters,horizon=HORIZ
 
 
 def build_full_project(raw:Path,out:Path,store='CA_1',top_n=30,source='m5',lead_days=7):
-    out=Path(out);out.mkdir(parents=True,exist_ok=True)
+    out=Path(out)
+    if out.resolve()==(Path(__file__).resolve().parents[1]/'outputs/m5').resolve():
+        raise ValueError('Published outputs/m5 is immutable; use outputs/m5_market or another output')
+    out.mkdir(parents=True,exist_ok=True)
     items,y,cal,prices,start=load_m5(raw,store,top_n)
     abc=make_abc_xyz(items,y,cal,prices,start)
     pred,met,chosen,test_origin,regs=backtest(items,y,cal,start)

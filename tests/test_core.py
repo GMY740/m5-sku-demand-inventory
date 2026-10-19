@@ -41,7 +41,7 @@ def test_abc_uses_only_pre_validation_history():
 
 def test_inventory_conservation_and_leadtime():
     y=np.ones(140)*3
-    ca=calendar(140)
+    ca=calendar(168)
     log=simulate_one(y,ca,100,28,'seasonal_naive_7',Policy('weekly_cover',lead_days=7,review_days=7),None,initial_units=7)
     assert (log.ending_on_hand>=0).all()
     assert (log.fulfilled+log.lost==log.demand).all()

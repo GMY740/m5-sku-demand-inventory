@@ -1,0 +1,58 @@
+[
+  {
+    "page": "经营与市场总览",
+    "file": "01_market.jpg",
+    "width": 588,
+    "height": 2203,
+    "frames": 4,
+    "complete": true
+  },
+  {
+    "page": "商品需求分析",
+    "file": "02_market.jpg",
+    "width": 588,
+    "height": 2052,
+    "frames": 4,
+    "complete": true
+  },
+  {
+    "page": "价格与销量分析",
+    "file": "03_market.jpg",
+    "width": 588,
+    "height": 2856,
+    "frames": 5,
+    "complete": true
+  },
+  {
+    "page": "地区市场分析",
+    "file": "04_market.jpg",
+    "width": 588,
+    "height": 3274,
+    "frames": 6,
+    "complete": true
+  },
+  {
+    "page": "需求预测评估",
+    "file": "05_market.jpg",
+    "width": 588,
+    "height": 2318,
+    "frames": 4,
+    "complete": true
+  },
+  {
+    "page": "库存及采购策略",
+    "file": "06_market.jpg",
+    "width": 588,
+    "height": 2122,
+    "frames": 4,
+    "complete": true
+  },
+  {
+    "page": "数据质量与研究局限",
+    "file": "07_market.jpg",
+    "width": 588,
+    "height": 1642,
+    "frames": 3,
+    "complete": true
+  }
+]

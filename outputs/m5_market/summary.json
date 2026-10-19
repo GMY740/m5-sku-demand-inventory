@@ -1,0 +1,17 @@
+{
+  "version": "m5_market_v1",
+  "data_kind": "M5 PUBLIC HISTORICAL SALES",
+  "market_manifest": "market_manifest.json",
+  "selected_forecast_method": "ridge_price_history",
+  "market_units": 14548395.0,
+  "market_sales_value": 45041697.91,
+  "test_wape": {
+    "moving_mean_28": 0.3601169632932778,
+    "ridge": 0.3090353418255203,
+    "ridge_price_history": 0.3082641143330692,
+    "seasonal_naive_7": 0.3627734691515221
+  },
+  "price_test_improvement_pp": 0.07712274924510654,
+  "inventory_status": "full known calendar coverage, simulated",
+  "limitations": "docs/18_market_limitations.md"
+}

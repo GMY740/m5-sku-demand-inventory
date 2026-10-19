@@ -1,3 +1,5 @@
+> 本文保留原30SKU历史基线口径。升级版完整方法见 [10_market_methodology.md](10_market_methodology.md)，新结果位于 outputs/m5_market。
+
 # 研究设计、指标口径与业务闭环
 
 ## 研究问题

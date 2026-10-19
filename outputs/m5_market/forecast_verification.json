@@ -1,0 +1,7 @@
+{
+  "original_prediction_rows": 7560,
+  "original_max_abs_difference": 1.4210854715202004e-14,
+  "selection": "ridge_price_history",
+  "validation_item_days_per_method": 1680,
+  "test_item_days_per_method": 840
+}

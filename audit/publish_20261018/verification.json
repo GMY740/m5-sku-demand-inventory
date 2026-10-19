@@ -1,0 +1,32 @@
+{
+  "protected_baseline_and_career_files": 13,
+  "local_links_checked": 167,
+  "missing_links": [],
+  "invalid_line_anchors": [],
+  "seven_full_dashboard_screenshots": true,
+  "official_raw_csv_included": false,
+  "interview_documents_updated": false,
+  "changed_file_list_included": false,
+  "largest_files_bytes": [
+    [
+      967430,
+      "outputs/m5_market/inventory_ledger.csv"
+    ],
+    [
+      6466031,
+      "outputs/m5_market/priority_risk_items.csv"
+    ],
+    [
+      7352780,
+      "outputs/m5_market/focus_weekly_prices_sales.csv"
+    ],
+    [
+      8890112,
+      "outputs/m5_market/category_daily.csv"
+    ],
+    [
+      10199227,
+      "outputs/m5_market/item_demand_trends.csv"
+    ]
+  ]
+}

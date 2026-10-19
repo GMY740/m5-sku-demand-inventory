@@ -1,0 +1,48 @@
+{
+  "version": "m5_market_v1",
+  "selection_basis": "Two validation folds aggregate WAPE only; frozen before test calculation",
+  "selected_method": "ridge_price_history",
+  "alpha": 15.0,
+  "price_features": [
+    "log1p_last_known",
+    "last_to_past28_mean",
+    "past28_missing_share"
+  ],
+  "future_price_assumption": "Freeze last strictly pre-origin known price across recursive forecast; cold start0 plus missing flag",
+  "candidate_C": "Not searched: fixed B protocol, no test-driven feature tuning",
+  "test_status": "Same already published2016 test, subsequent comparison; not pristine unseen research holdout",
+  "validation_metrics": [
+    {
+      "stage": "validation",
+      "method": "moving_mean_28",
+      "wape": 0.4051178928193762,
+      "mae": 7.834449535600425,
+      "evaluated_item_days": 1680,
+      "actual_units": 32489.0
+    },
+    {
+      "stage": "validation",
+      "method": "ridge",
+      "wape": 0.40416764863763577,
+      "mae": 7.816073057492946,
+      "evaluated_item_days": 1680,
+      "actual_units": 32489.0
+    },
+    {
+      "stage": "validation",
+      "method": "ridge_price_history",
+      "wape": 0.39934600768091477,
+      "mae": 7.722828835443595,
+      "evaluated_item_days": 1680,
+      "actual_units": 32489.0
+    },
+    {
+      "stage": "validation",
+      "method": "seasonal_naive_7",
+      "wape": 0.4551386623164764,
+      "mae": 8.801785714285714,
+      "evaluated_item_days": 1680,
+      "actual_units": 32489.0
+    }
+  ]
+}

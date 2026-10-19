@@ -1,0 +1,15 @@
+{
+  "version": "m5_market_v1",
+  "market_reconciliation": true,
+  "store_sku_rows": 30490,
+  "baseline_unchanged_files": 11,
+  "analysis_units": 14548395.0,
+  "analysis_sales_value": 45041697.91,
+  "analysis_unpriced_units": 0.0,
+  "forecast_metrics_reconciled": true,
+  "inventory_rows_conserved": 7560,
+  "strategy_fairness": true,
+  "candidate_inventory_rows_conserved": 2520,
+  "inventory_classification_equals_prevalidation_baseline": true,
+  "official_source_independent_unit_reconciliation": true
+}

@@ -23,7 +23,7 @@ if __name__=='__main__':
     raw=(root/'data/demo') if args.demo else Path(args.raw)
     if not raw.is_absolute():raw=root/raw
     if args.demo and not (raw/'sales_train_validation.csv').exists():build_demo(raw)
-    out=(root/('outputs/demo' if args.demo else 'outputs/m5')) if args.out is None else Path(args.out)
+    out=(root/('outputs/demo' if args.demo else 'outputs/m5_market/core_reproduction')) if args.out is None else Path(args.out)
     summary,_=build_full_project(raw,out,args.store,args.top_n,source='demo' if args.demo else 'm5',lead_days=args.lead_days)
     print(json.dumps({k:summary[k] for k in ['data_kind','sku_count','history_days','selected_forecast_method','validation_wape','test_wape','inventory_results']},ensure_ascii=False,indent=2))
     print('Saved results in:',out)

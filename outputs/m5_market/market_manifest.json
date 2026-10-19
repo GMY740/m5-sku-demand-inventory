@@ -1,0 +1,63 @@
+{
+  "version": "m5_market_v1",
+  "data_kind": "M5 PUBLIC HISTORICAL SALES",
+  "sales_file": "sales_train_evaluation.csv",
+  "sales_rows": 30490,
+  "history_days": 1941,
+  "history_start": "2011-01-29",
+  "history_end": "2016-05-22",
+  "analysis_start": "2015-05-25",
+  "analysis_end": "2016-05-22",
+  "analysis_days": 364,
+  "stores": [
+    "CA_1",
+    "CA_2",
+    "CA_3",
+    "CA_4",
+    "TX_1",
+    "TX_2",
+    "TX_3",
+    "WI_1",
+    "WI_2",
+    "WI_3"
+  ],
+  "price_rows": 6841121,
+  "calendar_days": 1969,
+  "focus_item_count": 30,
+  "abc_denominator": "All store-SKU series with >=95% priced-unit coverage in analysis364 days",
+  "abc_total_value": 45041697.91,
+  "price_association_scope": "Baseline30 item IDs across all10 stores, last364 days, full weeks; >=5 changes and26 weeks and50% nonzero",
+  "association_eligible": 4,
+  "price_events": 163,
+  "comparable_price_events": 103,
+  "tables": {
+    "category_daily": 135870,
+    "category_structure": 70,
+    "item_demand_trends": 30490,
+    "priority_risk_items": 18937,
+    "regional_category_comparison": 9,
+    "regional_item_comparison": 9147,
+    "store_comparison": 10,
+    "focus_weekly_prices_sales": 83400,
+    "focus_monthly_demand": 3900,
+    "price_change_events": 163,
+    "price_associations": 300,
+    "category_monthly": 4550,
+    "category_quarterly": 1540,
+    "category_annual": 420
+  },
+  "source_files": {
+    "sales_train_evaluation.csv": {
+      "size": 121736518,
+      "sha256": "4b4a47c44c38380d2a9168216fea8c9ff2f31b1ddb772f8a0995952a038b8aa0"
+    },
+    "calendar.csv": {
+      "size": 103469,
+      "sha256": "d12b5914ef03e66649adf5dd9e996e6602251c22b7a6af8f1f7e3aa12f8860f5"
+    },
+    "sell_prices.csv": {
+      "size": 203395785,
+      "sha256": "9da3ad1f8b8ccacdbdc70612191dd375ec24a4ac6625c24b75b3bc60b0bed2ef"
+    }
+  }
+}
